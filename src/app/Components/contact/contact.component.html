@@ -1,0 +1,88 @@
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-content">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="contact-subtitle">Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+      
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+  <div class="form-group floating">
+    <input type="text" id="name" formControlName="name" required>
+    <label for="name">Your Name</label>
+    <div class="underline"></div>
+  </div>
+
+  <div class="form-group floating">
+    <input type="email" id="email" formControlName="email" required>
+    <label for="email">Your Email</label>
+    <div class="underline"></div>
+  </div>
+
+  <div class="form-group floating">
+    <input type="text" id="subject" formControlName="subject" required>
+    <label for="subject">Subject</label>
+    <div class="underline"></div>
+  </div>
+
+  <div class="form-group floating">
+    <textarea id="message" rows="5" formControlName="message" required></textarea>
+    <label for="message">Your Message</label>
+    <div class="underline"></div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-submit">
+    <span>Send Message</span>
+    <i class="fas fa-paper-plane"></i>
+  </button>
+</form>
+    </div>
+    
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h3>Email</h3>
+          <p>ahmed.boughdiri.it@gmail.com</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="info-content">
+          <h3>Phone</h3>
+          <p>+216 27316506</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="info-content">
+          <h3>Location</h3>
+          <p>Megrine , BenArous</p>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/ahmedboughdiri-it" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-boughdiri-71a2aa35a/" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ahmed__boughdiri/" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact-particles"></div>
+</section>

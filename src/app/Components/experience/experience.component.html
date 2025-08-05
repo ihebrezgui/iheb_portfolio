@@ -1,0 +1,26 @@
+<section class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Professional <span>Experience</span></h2>
+    <p class="section-subtitle">My career journey and key positions</p>
+    
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      
+      <div class="timeline-item" *ngFor="let exp of experiences; let i = index" 
+           [style.--animation-order]="i">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="job-title">{{exp.position}}</h3>
+            <span class="job-period">{{exp.period}}</span>
+          </div>
+          <h4 class="company">{{exp.company}} <span class="job-type">{{exp.type}}</span></h4>
+          <p class="job-description">{{exp.description}}</p>
+          <div class="job-skills">
+            <span class="skill-tag" *ngFor="let skill of exp.skills">{{skill}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

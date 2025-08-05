@@ -1,0 +1,33 @@
+<section class="education-section">
+  <div class="container">
+    <h2 class="section-title">Education & <span>Certifications</span></h2>
+    <p class="section-subtitle">My academic background and professional certifications</p>
+    
+    <div class="education-grid">
+      <div class="education-card" *ngFor="let edu of education; let i = index" 
+           [style.--animation-order]="i">
+        <div class="card-header">
+          <div class="degree-icon">
+            <i [class]="edu.icon"></i>
+          </div>
+          <div class="degree-info">
+            <h3 class="degree-title">{{edu.degree}}</h3>
+            <span class="institution">{{edu.institution}}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="education-period">{{edu.period}}</span>
+          <p class="education-description">{{edu.description}}</p>
+        </div>
+        <div class="card-footer">
+          <span class="gpa-badge" *ngIf="edu.gpa">
+            <i class="fas fa-star"></i> GPA: {{edu.gpa}}
+          </span>
+          <a *ngIf="edu.certificateLink" [href]="edu.certificateLink" class="view-certificate">
+            View Certificate <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

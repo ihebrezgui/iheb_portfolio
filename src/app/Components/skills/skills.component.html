@@ -1,0 +1,29 @@
+<section  id="skills">
+  <div class="container">
+    <h2 class="section-title">My <span>Tech Stack</span></h2>
+    <p class="section-subtitle">Interactive 3D Visualization</p>
+    
+    <!-- 3D Skill Sphere -->
+    <div id="skill-sphere" class="skill-sphere-container"></div>
+    
+    <!-- Fallback Grid (shown on mobile) -->
+    <div class="skills-grid-fallback">
+      <div class="skill-category">
+        <h3><i class="fas fa-code"></i> Languages</h3>
+        <div class="skills-list">
+          <div *ngFor="let skill of programmingLanguages" class="skill-item">
+            <img [src]="skill.logo" [alt]="skill.name" class="skill-logo">
+            <div class="skill-info">
+              <span class="skill-name">{{skill.name}}</span>
+              <div class="skill-bar">
+                <div class="skill-level" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Repeat for frameworks and tools -->
+    </div>
+  </div>
+</section>

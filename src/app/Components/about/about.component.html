@@ -1,0 +1,78 @@
+<section id="about" class="dark-about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-image">
+        <div class="image-wrapper">
+          <div class="circle-container">
+            <div class="circle-border circle-border-1"></div>
+            <div class="circle-border circle-border-2"></div>
+            <div class="circle-border circle-border-3"></div>
+            <div class="circle-image">
+              <img src="assets/tagg.jpeg" alt="About Me" class="profile-image" />
+            </div>
+          </div>
+          <div class="tech-icons">
+            <div class="tech-icon" *ngFor="let tech of techIcons">
+  <a [href]="tech.url" target="_blank" rel="noopener noreferrer" aria-label="Social link">
+    <i [class]="tech.icon"></i>
+  </a>
+</div>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-text">
+        <h5 class="section-title"> <span></span></h5>
+        <h1 class="section-title"><span class="title-accent">About Me</span></h1>
+        <h3 class="about-subtitle">COMPUTER SCIENCE ENGINEER | FUTURE SOFTWARE ARCHITECT | ASPIRING ENTREPRENEUR</h3>
+        
+        <div class="about-description">
+          <p class="description-item">
+            <i class="fas fa-chevron-right"></i>
+            <span>Final-year Computer Science Engineering student at ESPRIT University, specializing in both Software Engineering and Full-Stack Development</span>
+          </p>
+          <p class="description-item">
+            <i class="fas fa-chevron-right"></i>
+            <span>Passionate about designing scalable systems with expertise in software architecture, microservices, and cloud-native applications</span>
+          </p>
+          <p class="description-item">
+            <i class="fas fa-chevron-right"></i>
+            <span>Building AI-powered solutions through academic projects and personal experiments</span>
+          </p>
+        </div>
+
+        <!-- Personal Vision Section -->
+        <div class="personal-vision">
+          <div class="vision-card">
+            <i class="fas fa-chess-queen"></i>
+            <h4>Architectural Aspirations</h4>
+            <p>Working toward becoming a Software Architect to design robust, large-scale systems that solve real-world problems efficiently.</p>
+          </div>
+          <div class="vision-card">
+            <i class="fas fa-rocket"></i>
+            <h4>Entrepreneurial Spirit</h4>
+            <p>Planning to launch my own tech startup, combining technical expertise with business vision to create innovative products.</p>
+          </div>
+          <div class="vision-card">
+            <i class="fas fa-cogs"></i>
+            <h4>Technical Philosophy</h4>
+            <p>Believe in building maintainable, well-architected systems that stand the test of time while adapting to new technologies.</p>
+          </div>
+        </div>
+
+        <div class="about-buttons">
+          <a href="assets/RESUME-AHMED-BOUGHDIRI.pdf" download="AHMED-BOUGHDIRI-RESUME.pdf" class="btn btn-gradient">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline-light">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+          <a href="#projects" class="btn btn-outline-accent">
+            <i class="fas fa-code-branch"></i> My Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

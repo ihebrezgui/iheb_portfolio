@@ -1,0 +1,57 @@
+<div class="experience-education-container" id="education" @fadeIn>
+  <h2 class="section-title">My <span>Tech Journey</span></h2>
+  
+  <div class="tab-controls">
+    <div class="tab-buttons">
+      <button [class.active]="activeTab === 'experience'" (click)="toggleTab('experience')">
+        <i class="fas fa-briefcase"></i>
+        <span>Experience</span>
+        <div class="underline" *ngIf="activeTab === 'experience'"></div>
+      </button>
+      <button [class.active]="activeTab === 'education'" (click)="toggleTab('education')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Education</span>
+        <div class="underline" *ngIf="activeTab === 'education'"></div>
+      </button>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="timeline" [@listAnimation]="activeTab === 'experience' ? experiences.length : education.length">
+      <ng-container *ngIf="activeTab === 'experience'">
+        <div class="timeline-item" *ngFor="let exp of experiences" @itemFade>
+          <div class="item-header">
+            <i class="fas fa-building"></i>
+            <div class="header-text">
+              <h3>{{exp.role}}</h3>
+              <span class="meta">{{exp.company}} • {{exp.period}}</span>
+            </div>
+          </div>
+          <p class="description">{{exp.description}}</p>
+          <div class="skills">
+            <span class="skill-tag" *ngFor="let skill of exp.skills">
+              <i [class]="getSkillIcon(skill)"></i>{{skill}}
+            </span>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="activeTab === 'education'">
+        <div class="timeline-item" *ngFor="let edu of education" @itemFade>
+          <div class="item-header">
+            <i class="fas fa-university"></i>
+            <div class="header-text">
+              <h3>{{edu.degree}}</h3>
+              <span class="meta">{{edu.institution}} • {{edu.period}}</span>
+            </div>
+          </div>
+          <ul class="highlights">
+            <li *ngFor="let highlight of edu.highlights">
+              <i class="fas fa-check-circle"></i>{{highlight}}
+            </li>
+          </ul>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

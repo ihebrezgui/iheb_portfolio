@@ -1,0 +1,132 @@
+:host {
+  --sidebar-width-collapsed: 70px;
+  --sidebar-width-expanded: 240px; /* Slightly wider for better text readability */
+  --icon-size: 22px;
+  --primary-color: #007AFF;
+  --bg-color: rgba(255, 255, 255, 0.15); /* More subtle transparency */
+  --text-color: #ffffff;
+  --transition-speed: 0.3s; /* Smoother transition */
+  --border-radius: 24px;
+  --sidebar-margin: 30px;
+  --hover-bg-color: rgba(255, 255, 255, 0.25); /* Hover effect */
+}
+
+.mac-sidebar {
+  position: fixed;
+  left: var(--sidebar-margin);
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  width: var(--sidebar-width-collapsed);
+  background: var(--bg-color);
+  backdrop-filter: blur(25px); /* Stronger blur for frosted glass effect */
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  z-index: 1000;
+  overflow: hidden; /* Keep hidden to prevent overflow issues */
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.05); /* Subtle inner border */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0; /* Padding inside the navbar */
+}
+
+.mac-sidebar.expanded {
+  width: var(--sidebar-width-expanded);
+  padding: 16px 0; /* More padding when expanded */
+}
+
+.sidebar-inner {
+  width: var(--sidebar-width-expanded);
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Spacing between nav items */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px; /* Increased gap for better separation */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  white-space: nowrap;
+  width: calc(100% - 10px);
+  border-radius: 14px;
+  margin: 0 5px;
+}
+
+.nav-link:hover {
+  background: var(--hover-bg-color); /* Hover effect */
+}
+
+.nav-link i {
+  font-size: var(--icon-size);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav-link:hover i {
+  transform: scale(1.1); /* Slight icon zoom on hover */
+}
+
+.link-text {
+  opacity: 0;
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transform: translateX(-5px);
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9); /* Slightly brighter text */
+}
+
+.mac-sidebar.expanded .link-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Active link styling (optional) */
+.nav-link.active {
+  background: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .mac-sidebar.hide-on-scroll {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mac-sidebar {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :host {
+    --sidebar-margin: 15px;
+    --sidebar-width-expanded: 200px;
+  }
+  
+  .nav-link {
+    padding: 10px 16px; /* Slightly smaller padding on mobile */
+  }
+}
