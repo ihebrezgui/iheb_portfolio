@@ -15,8 +15,8 @@ export class AboutComponent implements OnInit {
   { value: 1, label: 'Year Left to Graduate' }
 ];
   techIcons = [
-  { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/ahmed-boughdiri-71a2aa35a' },
-  { icon: 'fab fa-github', url: 'https://github.com/ahmedboughdiri-it' }
+  { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/iheb-rezgui-8721b8217/' },
+  { icon: 'fab fa-github', url: 'https://github.com/ihebrezgui' }
 ];
 
 

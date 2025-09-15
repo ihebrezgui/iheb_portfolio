@@ -47,28 +47,64 @@ export class ExperienceEducationComponent {
   activeTab: 'experience' | 'education' = 'experience';
   
   experiences = [
-    {
-      role: 'AI Intern – Web Scraping & Sentiment Analysis',
-      company: 'Clevory Training. ',
-      period: 'Summer 2024',
-      description: 'I completed an intensive AI bootcamp where I focused on core concepts in machine learning and natural language processing (NLP). As part of my hands-on experience, I built a review analysis platform using tools like Selenium, BeautifulSoup, Scikit-learn, and Streamlit. The platform integrates a multi-class emotion detection model capable of classifying user sentiments in real time. Additionally, I implemented techniques to extract key drivers of negative sentiment, providing actionable insights to support product improvement decisions.',
-      skills: ['Python', 'Selenium', 'NLP', 'BeautifulSoup']
-    }
-  ];
+  
+  {
+    role: 'Engineering Intern – Microservices Application Development',
+    company: 'ESPRIT – Private Higher School of Engineering and Technology',
+    period: 'July – August 2025',
+    description: 'Development of an exam monitoring management application based on a microservices architecture using Spring Boot, Eureka, Spring Cloud Gateway, Docker, and GitHub.',
+    skills: ['Spring Boot', 'Eureka', 'Spring Cloud Gateway', 'Docker', 'GitHub']
+  },
+  {
+    role: 'Immersion Internship – Mobile Quiz Development',
+    company: 'Edutest',
+    period: 'June 2024',
+    description: 'Development of a mobile quiz application using React Native, Node.js, and MongoDB.',
+    skills: ['React Native', 'Node.js', 'MongoDB']
+  },
+  {
+    role: 'Final Year Internship – QoS Website Development',
+    company: 'ISET’Com – Higher Institute of Communication Studies',
+    period: '2023',
+    description: 'Development of a website for measuring and analyzing QoS performance in telecommunication networks.',
+    skills: ['Web Development', 'QoS', 'Networking']
+  },
+  {
+    role: 'Technical Internship – Deployment and Maintenance',
+    company: 'ISET’Com',
+    period: '2022',
+    description: 'Deployment and maintenance of GSM and fiber optic infrastructures.',
+    skills: ['GSM', 'Fiber Optics', 'Network Maintenance']
+  },
+  {
+    role: 'Introductory Internship – GSM and Fiber Discovery',
+    company: 'ISET’Com',
+    period: '2021',
+    description: 'Introduction to GSM and fiber optic network technologies.',
+    skills: ['GSM', 'Fiber Optics']
+  }
+];
 
-  education = [
-    {
-      degree: 'Baccalaureate Degree',
-      institution: 'School Technique Farhat Hached Rades',
-      period: '2021',
-    },
-    {
-      degree: 'ESPRIT - Engineering Degree',
-      institution: 'The Private Higher School of Engineering and Technology Tunis',
-      period: '2021 - 2026',
-      highlights: ['Software Architecture Engineering']
-    }
-  ];
+education = [
+  {
+    degree: 'Engineering Degree in Software Engineering (ongoing)',
+    institution: 'Private Higher School of Engineering and Technology Tunis',
+    period: '2023 - 2026',
+    highlights: ['Software Architecture Engineering']
+  },
+  {
+    degree: 'Applied Bachelor’s Degree in Network Security',
+    institution: 'ISET’Com – Higher Institute of Communication Studies',
+    period: '09/2020 – 06/2023',
+    projects: [],
+    skills: ['Network Security', 'Data Protection', 'Networking Protocols']
+  },
+  {
+    degree: 'Baccalaureate Degree',
+    institution: 'Ser Kef High School, Tunisia',
+    period: '2021',
+  },
+];
 
   toggleTab(tab: 'experience' | 'education') {
     this.activeTab = tab;
