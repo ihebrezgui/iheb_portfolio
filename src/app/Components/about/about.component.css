@@ -303,8 +303,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
+  object-position: center 20%; /* plus la valeur est petite, plus le haut de la photo apparaît */
 }
 
 .circle-image:hover .profile-image {

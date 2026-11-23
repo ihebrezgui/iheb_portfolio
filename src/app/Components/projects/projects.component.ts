@@ -67,6 +67,37 @@ export class ProjectsComponent implements OnInit {
   code: 'https://github.com/ihebrezgui/User_BackEnd_SpringBoot.git'
 } ,
 
+
+ {
+    title: 'E-learning Platform',
+    year: 2023,
+    description: 'Développement d’une plateforme d’apprentissage en ligne, réalisée dans le cadre de mon cursus à l’ISET’Com.',
+    tags: ['JavaFX', 'Symfony', 'MySQL'],
+    image: 'assets/elearning.png',
+    screenshots: ['assets/elearning.png'],
+    
+    code: 'https://github.com/ihebrezgui/Pace-learning'
+  },
+  {
+    title: 'Mobile Flat-Sharing App',
+    year: 2024,
+    description: 'Conception et développement d’une application mobile facilitant la gestion d’une colocation : suivi des dépenses, organisation et partage entre colocataires.',
+    tags: ['Flutter', 'Dart', 'SQLite'],
+    image: 'assets/colocation.png',
+    screenshots: ['assets/colocation.png'],
+    
+    code: 'https://github.com/ihebrezgui/App_mobile_colocation'
+  },
+    {
+    title: 'ERP Migration (Odoo 12 to 18)',
+    year: 2026,
+    description: 'Progressive migration of an Odoo ERP from version 12 to version 18, carried out during my final-year internship (PFE) at Exploit Consult. The work covers data and module migration with OpenUpgrade, custom XML/JS and Python development, quality control with SonarQube, and reporting with Power BI, all within a Dockerized Linux environment.',
+    tags: ['Odoo', 'Python', 'PostgreSQL', 'OpenUpgrade', 'XML/JS', 'Power BI', 'SonarQube', 'Docker'],
+    image: 'assets/pfe-odoo.png',
+    screenshots: ['assets/pfe-odoo.png'],
+    code: 'https://github.com/Mouyasser02/odoo-exploit-consult-migration'
+  },
+
 {
   title: 'QoS Monitoring Web Application',
   year: 2023,
